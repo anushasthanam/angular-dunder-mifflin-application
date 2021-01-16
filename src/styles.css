@@ -1,0 +1,11 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import 'jasmine-core/lib/jasmine-core/jasmine.css';
+
+
+body {
+	font-family: Chalkboard, 'Comic Sans', Arial, Helvetica, sans-serif;
+}
+
+.last > .comment-box {
+	border-bottom-width: 0px !important;
+}

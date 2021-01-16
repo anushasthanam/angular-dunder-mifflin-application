@@ -1,0 +1,29 @@
+<div *ngIf="user" class="profile-box">
+	<div class="header">
+		<h1>Profile Detail</h1>
+	</div>
+	<div class="profile-info">
+		<div class="profile-name">{{user.name}}</div>
+		<div class="profile-location">
+			<div class="location-image">
+	<i class="fas fa-map-marker-alt"></i>
+			</div>
+			<div *ngIf="user.address" class="location-text">
+				{{ user.address.street + ', ' + user.address.suite }} <br />
+        {{ user.address.city + ', ' + user.address.zipcode}}
+      </div>
+			</div>
+			<div class="profile-phone">
+				<div class="phone-image">
+					<i class="fas fa-map-marker-alt"></i>
+				</div>
+				<div class="phone-number">{{ user.phone }}</div>
+			</div>
+			<div class="profile-email">
+				<div class="email-image">
+					<!--	<fa name="envelope"></fa> -->
+				</div>
+				<div class="email-text">{{ user.email }}</div>
+			</div>
+		</div>
+	</div>

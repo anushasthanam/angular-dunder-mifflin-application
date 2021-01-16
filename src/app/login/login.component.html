@@ -1,0 +1,29 @@
+<div class="home">
+  <div class="align">
+    <h1>Welcome to Dunder-Mifflin</h1>
+    <div class="subtitle">
+      Welcome to dunder-mifflin internal network.<br />
+      Please enter a username to view your posts and comments.
+    </div>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <p *ngIf="emailNotFound && email.valid" class="error">
+        Email not found
+      </p>
+      <p *ngIf="!email.valid && email.touched" class="error">
+        Invalid Email
+      </p>
+      <input
+        type="text"
+        placeholder="Email Address"
+        ngModel
+        name="email"
+        required
+        email
+        #email="ngModel"
+      />
+      <div>
+        <button type="submit" [disabled]="!f.valid">Logon</button>
+      </div>
+    </form>
+  </div>
+</div>

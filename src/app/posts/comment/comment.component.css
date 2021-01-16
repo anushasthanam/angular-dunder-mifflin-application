@@ -1,0 +1,16 @@
+.comment-box {
+	width: 90%;
+	margin: 0px auto;
+	padding: 20px;
+	border-bottom: solid 1px #000000;
+	text-align: left;
+}
+
+.comment-name {
+	font-weight: bold;
+	padding: 0px 0px 20px 50px;
+}
+
+.comment-body {
+	padding-left: 60px;
+}

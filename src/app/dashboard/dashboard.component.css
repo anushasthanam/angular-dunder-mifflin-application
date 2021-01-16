@@ -1,0 +1,26 @@
+.dashboard {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.post-list-container, .profile-container {
+	display: inline-block;
+}
+
+.profile-container {
+	width: 30%;
+	vertical-align:top;
+}
+
+.post-list-container {
+	width: 70%;
+	vertical-align:top;
+}
+
+@media only screen and (max-width: 1100px) {
+	.post-list-container, .profile-container {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}

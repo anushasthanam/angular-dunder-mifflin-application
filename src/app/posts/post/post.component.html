@@ -1,0 +1,7 @@
+<div *ngIf="post" class="post-box">
+  <div class="post-title">{{post.title}}</div>
+  <div class="post-body">{{post.body}}</div>
+  <div class="post-comments-container">
+    <app-comment *ngFor="let comment of comments; last as isLast" [class.last]="isLast" [comment]="comment"></app-comment>
+  </div>
+</div>
