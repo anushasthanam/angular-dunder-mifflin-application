@@ -3,20 +3,20 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 // models imports
-import { User } from '../models/user.model';
-import { Post } from '../models/post.model';
-import { Comment } from '../models/comment.model';
+import { IUser } from '../models/user.model';
+import { IPost } from '../models/post.model';
+import { IComment } from '../models/comment.model';
 
 
 @Injectable()
 export class DataStorageService {
   constructor(private http: HttpClient) {}
-  user: User;
-  posts: Post[];
-  comments: Comment[] = [];
+  user: IUser;
+  posts: IPost[];
+  comments: IComment[] = [];
   commentsUpdated = new EventEmitter<void>();
 
-  storeUser(user: User) {
+  storeUser(user: IUser) {
     this.user = user;
   }
 

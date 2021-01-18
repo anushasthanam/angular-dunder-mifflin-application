@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 // services
 import { AuthService } from '../../services/auth.service';
 // models
-import { User } from '../../models/user.model';
+import { IUser } from '../../models/user.model';
 
 @Component({
   selector: "app-login",
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authService
       .authenticate(this.form.value.email)
-      .subscribe((data: User | boolean) => {
+      .subscribe((data: IUser | boolean) => {
         if (!data) {
           this.emailNotFound = true;
         } else {

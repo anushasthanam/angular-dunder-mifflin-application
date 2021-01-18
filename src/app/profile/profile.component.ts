@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DataStorageService } from '../../services/data-storage.service';
 
-import { User } from '../../models/user.model';
+import { IUser } from '../../models/user.model';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  user: User = this.dataStorageService.getUser();
+  user: IUser = this.dataStorageService.getUser();
   constructor(private dataStorageService: DataStorageService) { }
 
   ngOnInit() {

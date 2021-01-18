@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../../models/post.model';
+import { IPost } from '../../../models/post.model';
 import { DataStorageService } from '../../../services/data-storage.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataStorageService } from '../../../services/data-storage.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
- @Input() post: Post;
+ @Input() post: IPost;
   comments: Comment[];
   constructor(private dataStorageService: DataStorageService) {}
 
