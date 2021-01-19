@@ -1,3 +1,4 @@
+import { jasmineRequire } from 'jasmine-core/lib/jasmine-core/jasmine.js';
 import "./global-jasmine";
 import "jasmine-core/lib/jasmine-core/jasmine-html.js";
 import "jasmine-core/lib/jasmine-core/boot.js";
@@ -20,20 +21,21 @@ import {
   platformBrowserDynamicTesting
 } from "@angular/platform-browser-dynamic/testing";
 
+
+declare var jasmine;
 // Testing app.component
 import "./app/app.component.spec.ts";
 
-//jasmine.getEnv().configure({ random: false });
 bootstrap();
 
 function bootstrap() {
-  // if (window.jasmineRef) {
-  //   location.reload();
-  //   return;
-  // } else {
-  //   window.onload;
-  //   window.jasmineRef = jasmine.getEnv();
-  // }
+  if (window['jasmineRef']) {
+    location.reload();
+    return;
+  } else {
+    window.onload(undefined);
+    window['jasmineRef'] = jasmine.getEnv();
+  }
 
   // First, initialize the Angular testing environment.
   getTestBed().initTestEnvironment(

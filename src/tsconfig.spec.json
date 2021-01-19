@@ -8,7 +8,7 @@
     ]
   },
   "files": [
-    "test.ts",
+    "main-testing.ts",
     "polyfills.ts"
   ],
   "include": [
