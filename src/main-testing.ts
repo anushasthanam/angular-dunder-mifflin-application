@@ -5,7 +5,7 @@ import "jasmine-core/lib/jasmine-core/boot.js";
 
 import "./polyfills";
 
-// This file is required by karma.conf.js and loads recursively all the .spec and framework files
+/// This file is required by karma.conf.js and loads recursively all the .spec and framework files
 import "zone.js/dist/async-test";
 import "zone.js/dist/fake-async-test";
 import "zone.js/dist/long-stack-trace-zone";
